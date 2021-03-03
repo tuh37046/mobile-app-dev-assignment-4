@@ -25,8 +25,8 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayList options = new ArrayList<String>();
-        options.add("Banana");
         options.add("Apple");
+        options.add("Banana");
         options.add("Blueberry");
         options.add("Raspberry");
 
