@@ -39,7 +39,7 @@ public class SelectionActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 System.out.println("Selected");
-                Toast.makeText(SelectionActivity.this, "Selected " + options.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SelectionActivity.this, "Here is your " + options.get(position), Toast.LENGTH_SHORT).show();
 
                 Intent display = new Intent(SelectionActivity.this, DisplayActivity.class);
                 display.putExtra("OPTIONS", options);

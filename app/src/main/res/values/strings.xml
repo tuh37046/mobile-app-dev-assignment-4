@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">lab5</string>
-    <string name="instruction">Please select an item</string>
-    <string name="grid_default">Default grid item</string>
+    <string name="instruction">Please select a fruit</string>
+    <string name="string_default">Default text</string>
         <string-array name="fruit_array">
             <item>Apple</item>
             <item>Banana</item>

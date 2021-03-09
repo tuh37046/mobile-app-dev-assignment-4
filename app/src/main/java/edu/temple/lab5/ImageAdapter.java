@@ -64,8 +64,6 @@ public class ImageAdapter extends BaseAdapter {
         TextView imageTextView = new TextView(context);
         imageTextView.setTextSize(24);
         imageTextView.setText((String)options.get(position));
-        imageTextView.setHeight(50);
-        imageTextView.setWidth(50);
         imageTextView.setTextColor(Color.parseColor("#FF000000"));
         imageTextView.setGravity(Gravity.CENTER);
         Drawable logo = ContextCompat.getDrawable(context,images[position]);
