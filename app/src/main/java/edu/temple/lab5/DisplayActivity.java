@@ -21,10 +21,10 @@ public class DisplayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.display_layout);
 
-        ImageView imageView = findViewById(R.id.imageView);
-        TextView  textView = findViewById(R.id.textView);
+        ImageView image = findViewById(R.id.largeImage);
+        TextView  description = findViewById(R.id.description);
 
         ArrayList options = new ArrayList<String>();
         int[] images = new int[]{R.drawable.apple,R.drawable.banana,R.drawable.blueberry,R.drawable.raspberry};
@@ -36,9 +36,8 @@ public class DisplayActivity extends AppCompatActivity {
         images = data.getIntArrayExtra("IMAGES");
         index = data.getIntExtra("INDEX",0);
 
-
-        textView.setText((String)options.get(index));
-        imageView.setImageResource(images[index]);
+        description.setText((String)options.get(index));
+        image.setImageResource(images[index]);
 
     }
 

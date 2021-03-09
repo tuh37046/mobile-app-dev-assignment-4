@@ -1,6 +1,7 @@
 package edu.temple.lab5;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -13,6 +14,7 @@ public class ImageAdapter extends BaseAdapter {
 
     private final Context context;
     ArrayList<String> options;
+    private LayoutInflater inflater;
 
     public ImageAdapter (Context context,ArrayList options) {
         this.context = context;

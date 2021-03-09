@@ -5,19 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
-import android.util.Pair;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.Spinner;
+import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class SelectionActivity extends AppCompatActivity {
+
+    boolean interacted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,30 +32,22 @@ public class SelectionActivity extends AppCompatActivity {
 
         ImageAdapter adapter = new ImageAdapter(this, options);
 
-       ImageView imageView = findViewById(R.id.imageView);
-       Spinner spinner = findViewById(R.id.spinner);
-       TextView text = findViewById(R.id.textView);
-       spinner.setAdapter(adapter);
+       //ImageView imageView = findViewById(R.id.imageView);
+       GridView grid = findViewById(R.id.gridView);
+       grid.setAdapter(adapter);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(SelectionActivity.this, "Item Selected", Toast.LENGTH_SHORT).show();
-                text.setText("Selected "+options.get(position));
-                imageView.setImageResource(images[position]);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println("Selected");
+                Toast.makeText(SelectionActivity.this, "Selected " + options.get(position), Toast.LENGTH_SHORT).show();
 
-                Intent display = new Intent(SelectionActivity.this,DisplayActivity.class);
-                display.putExtra("OPTIONS",options);
-                display.putExtra("IMAGES",images);
-                display.putExtra("INDEX",position);
+                Intent display = new Intent(SelectionActivity.this, DisplayActivity.class);
+                display.putExtra("OPTIONS", options);
+                display.putExtra("IMAGES", images);
+                display.putExtra("INDEX", position);
 
-               startActivity(display);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(SelectionActivity.this, "Deselected item", Toast.LENGTH_SHORT).show();
+                startActivity(display);
             }
         });
 
