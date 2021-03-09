@@ -32,7 +32,6 @@ public class SelectionActivity extends AppCompatActivity {
 
         ImageAdapter adapter = new ImageAdapter(this, options);
 
-       //ImageView imageView = findViewById(R.id.imageView);
        GridView grid = findViewById(R.id.gridView);
        grid.setAdapter(adapter);
 
