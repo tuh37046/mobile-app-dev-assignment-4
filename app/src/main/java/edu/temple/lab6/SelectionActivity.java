@@ -1,4 +1,4 @@
-package edu.temple.lab5;
+package edu.temple.lab6;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -23,10 +22,10 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayList options = new ArrayList<String>();
-        options.add("Apple");
-        options.add("Banana");
-        options.add("Blueberry");
-        options.add("Raspberry");
+        options.add(getApplicationContext().getResources().getString(R.string.apple));
+        options.add(getApplicationContext().getResources().getString(R.string.banana));
+        options.add(getApplicationContext().getResources().getString(R.string.blueberry));
+        options.add(getApplicationContext().getResources().getString(R.string.raspberry));
 
         int[] images = new int[]{R.drawable.apple,R.drawable.banana,R.drawable.blueberry,R.drawable.raspberry};
 
@@ -38,8 +37,7 @@ public class SelectionActivity extends AppCompatActivity {
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                System.out.println("Selected");
-                Toast.makeText(SelectionActivity.this, "Here is your " + options.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SelectionActivity.this, getApplicationContext().getResources().getString(R.string.present) + options.get(position), Toast.LENGTH_SHORT).show();
 
                 Intent display = new Intent(SelectionActivity.this, DisplayActivity.class);
                 display.putExtra("OPTIONS", options);

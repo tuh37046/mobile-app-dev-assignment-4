@@ -1,6 +1,5 @@
-package edu.temple.lab5;
+package edu.temple.lab6;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.Color;
@@ -48,10 +47,11 @@ public class ImageAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         ArrayList options = new ArrayList<String>();
-        options.add("Apple");
-        options.add("Banana");
-        options.add("Blueberry");
-        options.add("Raspberry");
+        options.add(context.getResources().getString(R.string.apple));
+        options.add(context.getResources().getString(R.string.banana));
+        options.add(context.getResources().getString(R.string.blueberry));
+        options.add(context.getResources().getString(R.string.raspberry));
+
 
         int[] images = new int[]{R.drawable.apple,R.drawable.banana,R.drawable.blueberry,R.drawable.raspberry};
 

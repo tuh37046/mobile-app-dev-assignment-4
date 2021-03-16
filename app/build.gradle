@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "edu.temple.lab5"
+        applicationId "edu.temple.lab6"
         minSdkVersion 27
         targetSdkVersion 30
         versionCode 2
