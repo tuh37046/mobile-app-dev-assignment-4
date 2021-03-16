@@ -37,7 +37,7 @@ public class SelectionActivity extends AppCompatActivity {
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(SelectionActivity.this, getApplicationContext().getResources().getString(R.string.present) + options.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SelectionActivity.this, getApplicationContext().getResources().getString(R.string.present)+ " " + options.get(position), Toast.LENGTH_SHORT).show();
 
                 Intent display = new Intent(SelectionActivity.this, DisplayActivity.class);
                 display.putExtra("OPTIONS", options);

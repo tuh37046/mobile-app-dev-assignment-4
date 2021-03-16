@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">lab6</string>
-    <string name="instruction">ES Please select a fruit</string>
-    <string name="string_default">ES Default text</string>
+    <string name="instruction">Seleccione una fruta </string>
+    <string name="string_default">Texto predeterminado </string>
         <string-array name="fruit_array">
-            <item>ES Apple</item>
-            <item>ES Banana</item>
-            <item>ES Blueberry</item>
-            <item>ES Strawberry</item>
+            <item>Manzana</item>
+            <item>Plátano</item>
+            <item>Arándano</item>
+            <item>Frambuesa</item>
         </string-array>
-    <string name="present">Here is your </string>
-    <string name="apple">Apple</string>
-    <string name="banana">Banana</string>
-    <string name="blueberry">Blueberry</string>
-    <string name="raspberry">Raspberry</string>
+    <string name="present">Aquí está tu</string>
+    <string name="apple">Manzana</string>
+    <string name="banana">Plátano</string>
+    <string name="blueberry">Arándano</string>
+    <string name="raspberry">Frambuesa</string>
 </resources>
